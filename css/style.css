@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Raleway:300");
+/* Imported Fonts
+ *
+ * font-family: 'Raleway', sans-serif;
+ * font-family: 'Oswald', sans-serif;
+ * font-family: 'Open Sans', sans-serif; */
+/*************************************
+ *Global styles Starts
+ ************************************ */
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #2e3c40;
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+  font-size: 1rem; }
+
+ul, li, a, p {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #2e3c40; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0; }
+
+h3 {
+  font-size: 2.5rem; }
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem; }
+
+div {
+  display: block; }
+
+.contain {
+  width: 90%;
+  margin: auto; }
+
+.clear::after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/*************************************
+ * Global styles Finished
+ ************************************* */
+/*************************************
+ *Header Styles Starts
+ ************************************* */
+#logo {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600; }
+  #logo #logo-first-letter {
+    color: #ff5c5c;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px rgba(52, 52, 52, 0.5); }
+  #logo img {
+    margin: 1em 0; }
+
+.nav_links li {
+  text-align: center;
+  padding: .5em 0; }
+
+/*************************************
+ *Header Styles Ends
+ ************************************* */
+/*************************************
+ *Portfolio Styles Starts
+ ************************************* */
+.main_content {
+  position: relative;
+  z-index: 10;
+  background: #ededed; }
+
+.main_heading {
+  text-align: left;
+  padding: 1em 1em; }
+  .main_heading h1 {
+    color: #2e3c40;
+    font-size: 3em; }
+
+.solutions p {
+  font-size: .9em;
+  text-transform: uppercase; }
+
+.main_heading li {
+  display: inline-block; }
+
+.main_heading a {
+  font-size: 2em;
+  text-decoration: underline;
+  text-transform: capitalize; }
+
+#taglist a {
+  color: #ff5c5c; }
+
+#taglist li:not(:last-child):after {
+  content: ", ";
+  color: #ff5c5c; }
+
+/*************************************
+ *Partners Images Styles Starts
+ ************************************* */
+.middle_page {
+  display: grid;
+  grid-template-columns: auto; }
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #2e3c40; }
+  .col img {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  .col .text-img {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 20px rgba(97, 97, 97, 0.9);
+    width: 80%;
+    margin-top: 2em;
+    padding-left: 1em;
+    text-transform: uppercase; }
+  .col h2 {
+    font-size: 2rem; }
+
+.col3 .text-img {
+  max-width: 40%;
+  font-size: 1rem; }
+
+.col4 {
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 50%;
+  background-color: #ffffff;
+  text-align: center; }
+
+.sponsers {
+  text-align: center; }
+  .sponsers img {
+    max-width: 30%;
+    max-height: 30%; }
+
+.orange_links a {
+  font-size: 2em;
+  color: #ff5c5c;
+  text-decoration: underline; }
+
+.articles {
+  position: relative;
+  padding: 10% 7%;
+  display: block; }
+  .articles:hover .border_top div {
+    border-top: 1px solid #ff5c5c; }
+  .articles h6 {
+    font-size: 1.5em; }
+
+.img_gallery {
+  margin: auto;
+  width: 80%; }
+
+div.cell {
+  margin: 10px;
+  float: left;
+  width: 180px; }
+  div.cell img {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    margin-top: 2em; }
+
+/*************************************
+ *Portfolio Styles Ends
+ ************************************* */
+/*************************************
+ *Footer Styles Starts
+ ************************************* */
+#footer_spacer {
+  position: relative;
+  z-index: -1;
+  height: 30em;
+  pointer-events: none; }
+
+footer {
+  position: fixed;
+  z-index: 0;
+  height: 30em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ff5c5c;
+  padding: 1em;
+  padding-top: 0;
+  border: 0 solid #fff;
+  transition: all .1s ease , padding .3s ease; }
+  footer p {
+    color: #2e3c40;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row; }
+  footer .footer_content h2 {
+    font-size: 3em; }
+  footer .footer_secondary {
+    background: #ffffff;
+    text-align: center;
+    font: 1.5em; }
+
+/*************************************
+ *Footer Styles Ends
+ ************************************* */
+/*************************************
+ * Media queries starts Finished
+ ************************************* */
+@media (max-width: 40em) {
+  .clear::after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .col3 {
+    height: 100%;
+    width: 50%;
+    float: left; }
+  .col4 {
+    float: right; }
+    .col4 a {
+      margin-top: 40px;
+      font-size: 1.5em; } }
+
+@media (min-width: 50em) {
+  /*************************************
+   *Header Styles Starts
+   *************************************/
+  .hero_header {
+    max-width: 85%;
+    margin: auto;
+    padding-top: 3.75em; }
+  .main_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: 10px;
+    height: 150px; }
+  #logo {
+    padding-left: 20px; }
+    #logo img {
+      align-items: center; }
+  .nav_links {
+    display: flex; }
+    .nav_links li:first-child {
+      margin-right: auto; }
+    .nav_links a {
+      font-family: sans-serif;
+      font-weight: 200;
+      font-size: 1.10em;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase; }
+  /*************************************
+   *Header Styles Ends
+   ************************************* */
+  /*     ************************************
+   *  Portfolios Edits Starts here
+   * ************************************ */
+  .main_heading {
+    margin-bottom: 6em; }
+    .main_heading h1 {
+      font-size: 6.75em; }
+  .sub_heading {
+    max-width: 40%;
+    padding-right: 2em;
+    align-self: stretch; }
+    .sub_heading p {
+      font-size: 1.5em; }
+  .solutions {
+    max-width: 50%;
+    margin-left: 3em;
+    padding-right: 4em;
+    align-self: stretch; }
+    .solutions ul {
+      max-width: 90%; }
+  .contain {
+    width: 85%;
+    margin: auto; }
+  .container {
+    padding: 1em 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2);
+    grid-gap: 10px;
+    grid-template-areas: "a a b b " "c d b b "; }
+  .text-img {
+    display: none; }
+  .col:hover .text-img {
+    max-width: 40%;
+    cursor: pointer;
+    display: block;
+    justify-content: center;
+    align-items: center; }
+  .col3:hover .text-img {
+    display: block;
+    align-items: center;
+    width: 22%;
+    cursor: pointer; }
+  .col1 {
+    grid-area: a; }
+  .col2 {
+    grid-area: b; }
+  .col3 {
+    grid-area: c; }
+  .col4 {
+    grid-area: d;
+    font-size: 2em;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center; }
+  .sponsers li {
+    display: inline-block;
+    width: 30%;
+    height: 30%; }
+  /*     ************************************
+   *   Articles Starts here
+   * ************************************ */
+  .flex_float {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-flow: row; }
+  .contain h3 {
+    font-size: 3.5em; }
+  .flex_float h6 {
+    font-size: 2em; }
+  .left {
+    width: 50%;
+    order: 1; }
+  .right {
+    flex: 50%;
+    order: 2;
+    padding: 0 2em; }
+  aside {
+    margin: 1em 0 0 0; }
+  .border_right {
+    border-right: 1px solid #ff5c5c;
+    padding-left: 2em; }
+  .branding_stat {
+    padding-left: 2em; }
+  /*     ************************************
+   * Articles Starts here
+   * ************************************ */
+  .img_gallery {
+    width: 70%;
+    margin-top: 3em; }
+  div.cell {
+    margin: 5px;
+    float: left;
+    width: 300px;
+    padding: 1em 2em; }
+  /*     ************************************
+   *  Portfolios Edits Starts here
+   * ************************************ */
+  /*     ************************************
+   * Footer Styles Starts
+   * ************************************ */
+  #address {
+    padding-left: 2em;
+    float: left; }
+  #social {
+    padding-right: 2em;
+    float: right; }
+  .footer_secondary {
+    bottom: 2.5em; }
+  /*     ************************************
+   * Footer Styles Ends
+   * ************************************ */
+  /*     ************************************
+   *  Media queries Finished
+   * ************************************ */ }
