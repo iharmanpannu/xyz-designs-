@@ -186,7 +186,7 @@ div
   position: relative
   padding: 10% 7%
   display: block
-  &:hover .border_top div
+  .border_top div
     border-top: 1px solid $orange-red
   h6
     font-size: 1.5em
@@ -213,37 +213,66 @@ div.cell
  *Footer Styles Starts
  *************************************
 
-#footer_spacer
-  position: relative
-  z-index: -1
-  height: 30em
-  pointer-events: none
-
 footer
-  position: fixed
-  z-index: 0
-  height: 30em
-  left: 0
-  bottom: 0
-  width: 100%
   background: $orange-red
-  padding: 1em
-  padding-top: 0
-  border: 0 solid #fff
-  transition: all .1s ease , padding .3s ease
-  p
-    color: $grey-color
-    font-size: 1em
+  height: 100%
+  width: 100%
+  background-size: 100vw
+  color: $light-white
+  padding: 6em 3em
+  .contain
     display: flex
-    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+  .footer_content
+    flex-basis: auto
+    h5
+      font-size: 4rem
+    h6
+      font-size: 2rem
+      text-transform: capitalize
+      text-decoration: overline
 
-  .footer_content h2
-    font-size: 3em
+  .contacts
+    font-size: 1.5rem
 
-  .footer_secondary
-    background: #ffffff
-    text-align: center
-    font: 1.5em
+
+
+
+
+
+
+// #footer_spacer
+//   position: relative
+//   z-index: -1
+//   height: 30em
+//   pointer-events: none
+//
+// footer
+//   position: fixed
+//   z-index: 0
+//   height: 30em
+//   left: 0
+//   bottom: 0
+//   width: 100%
+//   background: $orange-red
+//   padding: 1em
+//   padding-top: 0
+//   border: 0 solid #fff
+//   transition: all .1s ease , padding .3s ease
+//   p
+//     color: $grey-color
+//     font-size: 1em
+//     display: flex
+//     flex-direction: row
+//
+//   .footer_content h2
+//     font-size: 3em
+//
+//   .footer_secondary
+//     background: #ffffff
+//     text-align: center
+//     font: 1.5em
 
 /*************************************
  *Footer Styles Ends
@@ -409,14 +438,28 @@ footer
   /*     ************************************
    * Footer Styles Starts
    * ************************************
-  #address
-    padding-left: 2em
-    float: left
-  #social
-    padding-right: 2em
-    float: right
-  .footer_secondary
-    bottom: 2.5em
+  .contain
+    display: flex
+    justify-content: center
+    .footer_content
+      // flex-flow: column
+      order: 1
+    .footer_secondary
+      order: 5
+      .social
+        font-size: 100px
+
+
+
+
+  // #address
+  //   padding-left: 2em
+  //   float: left
+  // #social
+  //   padding-right: 2em
+  //   float: right
+  // .footer_secondary
+  //   bottom: 2.5em
   /*     ************************************
    * Footer Styles Ends
    * ************************************

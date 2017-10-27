@@ -170,7 +170,7 @@ div {
   position: relative;
   padding: 10% 7%;
   display: block; }
-  .articles:hover .border_top div {
+  .articles .border_top div {
     border-top: 1px solid #ff5c5c; }
   .articles h6 {
     font-size: 1.5em; }
@@ -195,35 +195,27 @@ div.cell {
 /*************************************
  *Footer Styles Starts
  ************************************* */
-#footer_spacer {
-  position: relative;
-  z-index: -1;
-  height: 30em;
-  pointer-events: none; }
-
 footer {
-  position: fixed;
-  z-index: 0;
-  height: 30em;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background: #ff5c5c;
-  padding: 1em;
-  padding-top: 0;
-  border: 0 solid #fff;
-  transition: all .1s ease , padding .3s ease; }
-  footer p {
-    color: #2e3c40;
-    font-size: 1em;
+  height: 100%;
+  width: 100%;
+  background-size: 100vw;
+  color: #ededed;
+  padding: 6em 3em; }
+  footer .contain {
     display: flex;
-    flex-direction: row; }
-  footer .footer_content h2 {
-    font-size: 3em; }
-  footer .footer_secondary {
-    background: #ffffff;
-    text-align: center;
-    font: 1.5em; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  footer .footer_content {
+    flex-basis: auto; }
+    footer .footer_content h5 {
+      font-size: 4rem; }
+    footer .footer_content h6 {
+      font-size: 2rem;
+      text-transform: capitalize;
+      text-decoration: overline; }
+  footer .contacts {
+    font-size: 1.5rem; }
 
 /*************************************
  *Footer Styles Ends
@@ -384,14 +376,15 @@ footer {
   /*     ************************************
    * Footer Styles Starts
    * ************************************ */
-  #address {
-    padding-left: 2em;
-    float: left; }
-  #social {
-    padding-right: 2em;
-    float: right; }
-  .footer_secondary {
-    bottom: 2.5em; }
+  .contain {
+    display: flex;
+    justify-content: center; }
+    .contain .footer_content {
+      order: 1; }
+    .contain .footer_secondary {
+      order: 5; }
+      .contain .footer_secondary .social {
+        font-size: 100px; }
   /*     ************************************
    * Footer Styles Ends
    * ************************************ */
