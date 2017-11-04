@@ -215,7 +215,7 @@ footer {
       text-transform: capitalize;
       text-decoration: overline; }
   footer .contacts {
-    font-size: 1.5rem; }
+    font-size: 1rem; }
 
 /*************************************
  *Footer Styles Ends
@@ -376,14 +376,16 @@ footer {
   /*     ************************************
    * Footer Styles Starts
    * ************************************ */
-  .contain {
+  footer .contain {
     display: flex;
-    justify-content: center; }
-    .contain .footer_content {
-      order: 1; }
-    .contain .footer_secondary {
-      order: 5; }
-      .contain .footer_secondary .social {
+    justify-content: center;
+    font-size: 2rem; }
+    footer .contain .footer_content {
+      padding-right: 2em; }
+    footer .contain .footer_secondary {
+      padding-left: 2em; }
+      footer .contain .footer_secondary a {
+        color: #ededed;
         font-size: 100px; }
   /*     ************************************
    * Footer Styles Ends
