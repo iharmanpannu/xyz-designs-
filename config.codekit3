@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26097",
 "files": {
+	"\/_config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/_config.yml",
+		"oF": 0
+		},
 	"\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -225,11 +232,11 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/udacity.jpg": {
+	"\/img\/Udacity-Vertical.jpg": {
 		"ft": 16384,
 		"iS": 300640,
 		"oA": 0,
-		"oAP": "\/img\/udacity.jpg",
+		"oAP": "\/img\/Udacity-Vertical.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
