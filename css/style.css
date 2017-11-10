@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Oswald|Raleway:300");
 /* Imported Fonts
- *
  * font-family: 'Raleway', sans-serif;
  * font-family: 'Oswald', sans-serif;
- * font-family: 'Open Sans', sans-serif; */
-/*************************************
- *Global styles Starts
- ************************************ */
+ * font-family: 'Open Sans', sans-serif;
+ */
 * {
   box-sizing: border-box; }
 
@@ -27,8 +24,8 @@ ul {
 
 a {
   text-decoration: none;
-  letter-spacing: 1px;
-  color: #2e3c40; }
+  color: #2e3c40;
+  font-family: 'Open Sans', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
@@ -36,9 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin: 0;
   padding: 0; }
-
-h3 {
-  font-size: 2.5rem; }
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -64,7 +58,7 @@ div {
  ************************************* */
 #logo {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600; }
   #logo #logo-first-letter {
     color: #ff5c5c;
@@ -75,7 +69,8 @@ div {
 
 .nav_links li {
   text-align: center;
-  padding: .5em 0; }
+  padding: .5em 0;
+  text-transform: uppercase; }
 
 /*************************************
  *Header Styles Ends
@@ -155,12 +150,6 @@ div {
   background-color: #ededed;
   text-align: center; }
 
-.sponsers {
-  text-align: center; }
-  .sponsers img {
-    max-width: 30%;
-    max-height: 30%; }
-
 .orange_links a {
   font-size: 2em;
   color: #ff5c5c;
@@ -175,26 +164,15 @@ div {
   .articles h6 {
     font-size: 1.5em; }
 
-.img_gallery {
-  margin: auto;
-  width: 80%; }
+.partners_imgs {
+  display: flex;
+  flex-flow: wrap; }
+  .partners_imgs img {
+    max-width: 40%;
+    max-height: 40%;
+    padding: 20px;
+    margin: auto; }
 
-div.cell {
-  margin: 10px;
-  float: left;
-  width: 180px; }
-  div.cell img {
-    width: 100%;
-    height: auto;
-    padding: 1em;
-    margin-top: 2em; }
-
-/*************************************
- *Portfolio Styles Ends
- ************************************* */
-/*************************************
- *Footer Styles Starts
- ************************************* */
 footer {
   background: #ff5c5c;
   height: 100%;
@@ -211,19 +189,15 @@ footer {
     footer .footer_content h5 {
       font-size: 4rem; }
     footer .footer_content h6 {
-      font-size: 2rem;
+      font-size: 1rem;
       text-transform: capitalize;
       text-decoration: overline; }
   footer .contacts {
     font-size: 1rem; }
 
-/*************************************
- *Footer Styles Ends
- ************************************* */
-/*************************************
- * Media queries starts Finished
- ************************************* */
-@media (max-width: 40em) {
+@media (max-width: 780px) {
+  .hidden {
+    display: none; }
   .clear::after {
     content: " ";
     display: table;
@@ -239,42 +213,31 @@ footer {
       font-size: 1.5em; } }
 
 @media (min-width: 50em) {
-  /*************************************
-   *Header Styles Starts
-   *************************************/
+  /*** Header Styles Starts ******/
   .hero_header {
     max-width: 85%;
     margin: auto;
-    padding-top: 3.75em; }
+    padding-top: 3.75em;
+    height: 200px; }
   .main_header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid: 10px;
     height: 150px; }
-  #logo {
-    padding-left: 20px; }
-    #logo img {
-      align-items: center; }
-  .nav_links {
-    display: flex; }
-    .nav_links li:first-child {
-      margin-right: auto; }
-    .nav_links a {
-      font-family: sans-serif;
-      font-weight: 200;
-      font-size: 1.10em;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 5px;
-      display: block;
-      text-decoration: none;
-      text-transform: uppercase; }
-  /*************************************
-   *Header Styles Ends
-   ************************************* */
-  /*     ************************************
-   *  Portfolios Edits Starts here
-   * ************************************ */
+  nav #logo {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  nav .logo {
+    width: 15%; }
+  nav .nav_links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 85%; }
+    nav .nav_links a {
+      padding: 10px; }
   .main_heading {
     margin-bottom: 6em; }
     .main_heading h1 {
@@ -333,9 +296,6 @@ footer {
     display: inline-block;
     width: 30%;
     height: 30%; }
-  /*     ************************************
-   *   Articles Starts here
-   * ************************************ */
   .flex_float {
     display: flex;
     margin: auto;
@@ -359,37 +319,6 @@ footer {
     padding-left: 2em; }
   .branding_stat {
     padding-left: 2em; }
-  /*     ************************************
-   * Articles Starts here
-   * ************************************ */
-  .img_gallery {
-    width: 70%;
-    margin-top: 3em; }
-  div.cell {
-    margin: 5px;
-    float: left;
-    width: 300px;
-    padding: 1em 2em; }
-  /*     ************************************
-   *  Portfolios Edits Starts here
-   * ************************************ */
-  /*     ************************************
-   * Footer Styles Starts
-   * ************************************ */
-  footer .contain {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem; }
-    footer .contain .footer_content {
-      padding-right: 2em; }
-    footer .contain .footer_secondary {
-      padding-left: 2em; }
-      footer .contain .footer_secondary a {
-        color: #ededed;
-        font-size: 100px; }
-  /*     ************************************
-   * Footer Styles Ends
-   * ************************************ */
-  /*     ************************************
-   *  Media queries Finished
-   * ************************************ */ }
+  .partnersGallery {
+    margin: auto;
+    width: 80%; } }

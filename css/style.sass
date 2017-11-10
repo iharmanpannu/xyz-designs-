@@ -6,15 +6,14 @@
 $grey-color: #2e3c40
 $orange-red: #ff5c5c
 $light-white: #ededed
+
 /* Imported Fonts
- *
  * font-family: 'Raleway', sans-serif;
  * font-family: 'Oswald', sans-serif;
  * font-family: 'Open Sans', sans-serif;
+ */
 
-/*************************************
- *Global styles Starts
- ************************************
+// Global styles Starts
 
 *
   box-sizing: border-box
@@ -36,8 +35,8 @@ ul
 
 a
   text-decoration: none
-  letter-spacing: 1px
   color: $grey-color
+  font-family: 'Open Sans', sans-serif
 
 h1, h2, h3, h4, h5, h6
   font-family: 'Oswald', sans-serif
@@ -45,10 +44,6 @@ h1, h2, h3, h4, h5, h6
   text-transform: uppercase
   margin: 0
   padding: 0
-
-h3
-  font-size: 2.5rem
-
 p
   font-family: 'Raleway', sans-serif
   font-size: 1.3rem
@@ -75,19 +70,19 @@ div
 
 #logo
   text-align: center
-  font-size: 3em
+  font-size: 2em
   font-weight: 600
   #logo-first-letter
     color: $orange-red
     font-weight: 300
     text-shadow: 2px 2px 2px rgba(52, 52, 52, .5)
-
   img
     margin: 1em 0
 
 .nav_links li
   text-align: center
   padding: .5em 0
+  text-transform: uppercase
 
 /*************************************
  *Header Styles Ends
@@ -160,7 +155,6 @@ div
   max-width: 40%
   font-size: 1rem
 
-
 .col4
   text-decoration: underline
   display: flex
@@ -171,11 +165,6 @@ div
   background-color: $light-white
   text-align: center
 
-.sponsers
-  text-align: center
-  img
-    max-width: 30%
-    max-height: 30%
 
 .orange_links a
   font-size: 2em
@@ -190,28 +179,19 @@ div
     border-top: 1px solid $orange-red
   h6
     font-size: 1.5em
-
-.img_gallery
-  margin: auto
-  width: 80%
-
-div.cell
-  margin: 10px
-  float: left
-  width: 180px
+.partners_imgs
+  display: flex
+  flex-flow: wrap
   img
-    width: 100%
-    height: auto
-    padding: 1em
-    margin-top: 2em
+    max-width: 40%
+    max-height: 40%
+    padding: 20px
+    margin: auto
 
-/*************************************
- *Portfolio Styles Ends
- *************************************
+// Portfolio Styles Ends
 
-/*************************************
- *Footer Styles Starts
- *************************************
+
+// Footer Styles Starts
 
 footer
   background: $orange-red
@@ -229,60 +209,16 @@ footer
     h5
       font-size: 4rem
     h6
-      font-size: 2rem
+      font-size: 1rem
       text-transform: capitalize
       text-decoration: overline
-
   .contacts
     font-size: 1rem
 
+@media (max-width: 780px)
 
-
-
-
-
-
-// #footer_spacer
-//   position: relative
-//   z-index: -1
-//   height: 30em
-//   pointer-events: none
-//
-// footer
-//   position: fixed
-//   z-index: 0
-//   height: 30em
-//   left: 0
-//   bottom: 0
-//   width: 100%
-//   background: $orange-red
-//   padding: 1em
-//   padding-top: 0
-//   border: 0 solid #fff
-//   transition: all .1s ease , padding .3s ease
-//   p
-//     color: $grey-color
-//     font-size: 1em
-//     display: flex
-//     flex-direction: row
-//
-//   .footer_content h2
-//     font-size: 3em
-//
-//   .footer_secondary
-//     background: #ffffff
-//     text-align: center
-//     font: 1.5em
-
-/*************************************
- *Footer Styles Ends
- *************************************
-
-/*************************************
- * Media queries starts Finished
- *************************************
-
-@media (max-width: 40em)
+  .hidden
+    display: none
   .clear::after
     content: " "
     display: table
@@ -298,43 +234,34 @@ footer
       font-size: 1.5em
 
 @media (min-width: 50em)
-  /*************************************
-   *Header Styles Starts
-   *************************************/
 
+  /*** Header Styles Starts ******/
   .hero_header
     max-width: 85%
     margin: auto
     padding-top: 3.75em
+    height: 200px
   .main_header
     display: grid
     grid-template-columns: 1fr 1fr
     grid: 10px
     height: 150px
-  #logo
-    padding-left: 20px
-    img
+  nav
+    #logo
+      text-align: left
+      display: flex
+      justify-content: center
       align-items: center
-  .nav_links
-    display: flex
-    li:first-child
-      margin-right: auto
-    a
-      font-family: sans-serif
-      font-weight: 200
-      font-size: 1.10em
-      margin: 10px
-      padding: 15px
-      border-radius: 5px
-      display: block
-      text-decoration: none
-      text-transform: uppercase
-  /*************************************
-   *Header Styles Ends
-   *************************************
-  /*     ************************************
-   *  Portfolios Edits Starts here
-   * ************************************
+    .logo
+      width: 15%
+    .nav_links
+      display: flex
+      align-items: flex-end
+      justify-content: flex-end
+      width: 85%
+      a
+        padding: 10px
+
   .main_heading
     margin-bottom: 6em
     h1
@@ -395,65 +322,37 @@ footer
     display: inline-block
     width: 30%
     height: 30%
-  /*     ************************************
-   *   Articles Starts here
-   * ************************************
+
   .flex_float
     display: flex
     margin: auto
     justify-content: center
     flex-flow: row
+
   .contain h3
     font-size: 3.5em
+
   .flex_float h6
     font-size: 2em
+
   .left
     width: 50%
     order: 1
+
   .right
     flex: 50%
     order: 2
     padding: 0 2em
+
   aside
     margin: 1em 0 0 0
+
   .border_right
     border-right: 1px solid $orange-red
     padding-left: 2em
+
   .branding_stat
     padding-left: 2em
-  /*     ************************************
-   * Articles Starts here
-   * ************************************
-  .img_gallery
-    width: 70%
-    margin-top: 3em
-  div.cell
-    margin: 5px
-    float: left
-    width: 300px
-    padding: 1em 2em
-  /*     ************************************
-   *  Portfolios Edits Starts here
-   * ************************************
-  /*     ************************************
-   * Footer Styles Starts
-   * ************************************
-  footer
-    .contain
-      display: flex
-      justify-content: center
-      font-size: 2rem
-      .footer_content
-        padding-right: 2em
-      .footer_secondary
-        padding-left: 2em
-        a
-          color: $light-white
-          font-size: 100px
-
-  /*     ************************************
-   * Footer Styles Ends
-   * ************************************
-  /*     ************************************
-   *  Media queries Finished
-   * ************************************
+  .partnersGallery
+    margin: auto
+    width: 80%
